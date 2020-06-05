@@ -8,6 +8,7 @@ The rate of deaths per number of diagnosed cases is on average 3.4%, ranging fro
 
 
 Modeling COVID-19 epidemic with Python
+
 some open source data science libraries such as Pandas, Matplotlib and Scikit-learn. ].
 
 import pandas as pd
@@ -263,7 +264,7 @@ zone1_df = data[data.denominazione_regione.isin(['Piemonte','Emilia-Romagna','Ve
 zone1_df['deceduti'].sum()
 print("Zone 1 accounts for %s percent of the total deaths" % (round(zone1_df['deceduti'].sum() / data['deceduti'].sum() * 100,2)))
 
-Zone 1 accounts for 80.74 percent of the total deaths
+#Zone 1 accounts for 80.74 percent of the total deaths
 
 Let's take a look to regional trends of both perc_positive and gravi_deceduti, for a sample of regions.
 
@@ -304,7 +305,8 @@ for variable in list_of_variables:
     fig.tight_layout()
     fig.savefig('Regional trend of ' + variable + '.png')
     plt.show()
-Creating regional charts for perc_positive
+
+#Creating regional charts for perc_positive
 
 Creating regional charts for gravi_deceduti
 
@@ -312,6 +314,7 @@ As shown in the charts above, the situation varies considerably from region to r
 
 For each region a different model should be applied, in order to better understand the epidemic trends in the different areas of the country. Given that the Civil Protection provides data also on a provincial basis, it would be possible to model the situation even better than this. 
 
-Conclusions
+#Conclusions
+
 MY model tells us that the COVID-19 epidemic will end in Italy in Upcoming Year,.  Regional differences apart, I have to consider that any new external factor can change the effective trend of the epidemic. The current model can not take into account unexpected changes in the system, such as the gradual loosening of lockdown restrictions, or the effects of warmer temperature over the virus spread. 
 
